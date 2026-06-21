@@ -473,35 +473,3 @@ function postToX()
 
     window.open(url, "_blank");
 }
-
-/* ------------------------
-   ランダム配置
------------------------- */
-
-function randomizePills()
-{
-    const pills =
-        document.querySelectorAll(".pill");
-
-    pills.forEach(pill =>
-    {
-        const x =
-            Math.random() * 140 - 70;
-
-        const y =
-            Math.random() * 180 - 90;
-
-        const angle =
-            Math.floor(
-                Math.random() * 360
-            );
-
-        pill.setAttribute("data-x", x);
-        pill.setAttribute("data-y", y);
-
-        pill.dataset.rotation =
-            angle;
-
-        updateTransform(pill);
-    });
-}
