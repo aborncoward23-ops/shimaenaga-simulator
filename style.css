@@ -1,0 +1,360 @@
+body
+{
+    text-align:center;
+
+    font-family:sans-serif;
+}
+
+/* ------------------------
+   背景エリア
+------------------------ */
+
+#areaBackground
+{
+    width:550px;
+
+    margin:auto;
+
+    padding:40px;
+
+    background:#FFFFFF;
+
+    box-sizing:border-box;
+}
+
+/* ------------------------
+   袋エリア
+------------------------ */
+
+#area
+{
+    position:relative;
+
+    width:400px;
+
+    margin:auto;
+}
+
+#bag
+{
+    width:100%;
+
+    display:block;
+}
+
+/* ------------------------
+   錠剤配置レイヤー
+------------------------ */
+
+#pills
+{
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+}
+
+/* ------------------------
+   ロゴ
+------------------------ */
+
+#logo
+{
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+}
+
+/* ------------------------
+   コピーライト
+------------------------ */
+
+#copyright
+{
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+}
+
+/* ------------------------
+   錠剤
+------------------------ */
+
+.pill
+{
+    position:absolute;
+
+    cursor:grab;
+
+    touch-action:none;
+}
+
+.selected
+{
+    outline:2px solid #888888;
+}
+
+/* ------------------------
+   共通パネル
+------------------------ */
+
+.panelHidden
+{
+    display:none;
+}
+
+#backgroundPanel,
+#pillPanel
+{
+    width:350px;
+
+    margin:0 auto 20px auto;
+
+    padding:15px;
+
+    border:1px solid #CCCCCC;
+
+    background:#FFFFFF;
+}
+
+/* ------------------------
+   背景色ボタン
+------------------------ */
+
+.presetColors
+{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:12px;
+}
+
+.colorButton
+{
+    width:50px;
+
+    height:50px;
+
+    border:2px solid #CCCCCC;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    padding:0;
+}
+
+.white
+{
+    background:#FFFFFF;
+}
+
+.gray
+{
+    background:#E2E2E2;
+}
+
+.mint
+{
+    background:#E8FAF8;
+}
+
+.pink
+{
+    background:#FFF0F4;
+}
+
+.lavender
+{
+    background:#F4EEFF;
+}
+
+/* ------------------------
+   錠剤選択
+------------------------ */
+
+.pillSection
+{
+    margin-bottom:20px;
+}
+
+.pillButton
+{
+    width:60px;
+
+    margin:5px;
+
+    cursor:pointer;
+
+    border:2px solid transparent;
+}
+
+.pillButton:hover
+{
+    border-color:#BBBBBB;
+}
+
+/* ------------------------
+   カラーピッカー
+------------------------ */
+
+#customColor
+{
+    width:80px;
+
+    height:40px;
+
+    border:none;
+
+    cursor:pointer;
+}
+
+/* ------------------------
+   共通ボタン
+------------------------ */
+
+button
+{
+    padding:8px 12px;
+
+    margin:2px;
+}
+
+/* ------------------------
+   錠剤タブ
+------------------------ */
+
+.pillTabs
+{
+    display:flex;
+
+    margin-bottom:15px;
+
+    border-bottom:2px solid #CCCCCC;
+}
+
+.pillTabContent
+{
+    display:none;
+}
+
+.pillTab
+{
+    flex:1;
+
+    padding:10px;
+
+    border:none;
+
+    background:#F5F5F5;
+
+    cursor:pointer;
+
+    margin:0;
+
+    border-radius:0;
+}
+
+.pillTab:hover
+{
+    background:#EEEEEE;
+}
+
+.activeTab
+{
+    background:#FFFFFF;
+
+    border-bottom:3px solid #888888;
+
+    font-weight:bold;
+}
+
+/* ------------------------
+   錠剤一覧スクロール
+------------------------ */
+
+.pillTabContent
+{
+    display:none;
+
+    max-height:300px;
+
+    overflow-y:auto;
+
+    padding:10px;
+}
+
+#selectedInfo
+{
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin-top:10px;
+
+    color:#555555;
+}
+
+.pillItem
+{
+    text-align:center;
+}
+
+.pillLabel
+{
+    font-size:12px;
+
+    margin-top:3px;
+}
+
+/* ------------------------
+   錠剤グリッド
+------------------------ */
+
+.pillGrid
+{
+    display:grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap:12px;
+
+    padding:10px;
+}
+
+/* ------------------------
+   注意書き
+------------------------ */
+
+#notice
+{
+    width:550px;
+
+    margin:20px auto;
+
+    text-align:left;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    color:#666666;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>シマエナガ薬局シミュレーター</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+    <h1>シマエナガのおくすりシミュレーター</h1>
+
+    <button onclick="openPillPanel()">
+        💊 錠剤追加
+    </button>
+
+    <div id="pillPanel" class="panelHidden">
+
+        <h3>錠剤を選ぶ</h3>
+
+        <div class="pillTabs">
+
+            <button
+                id="tabButtonShimaenaga"
+                class="pillTab"
+                onclick="showTab('shimaenaga')">
+                シマエナガ
+            </button>
+
+            <button
+                id="tabButtonCircle"
+                class="pillTab"
+                onclick="showTab('circle')">
+                丸型
+            </button>
+
+            <button
+                id="tabButtonHeart"
+                class="pillTab"
+                onclick="showTab('heart')">
+                ハート型
+            </button>
+
+        </div>
+
+        <!-- app.js が自動生成 -->
+
+        <div
+            id="tab-shimaenaga"
+            class="pillTabContent">
+        </div>
+
+        <div
+            id="tab-circle"
+            class="pillTabContent">
+        </div>
+
+        <div
+            id="tab-heart"
+            class="pillTabContent">
+        </div>
+
+        <br>
+
+        <button onclick="closePillPanel()">
+            閉じる
+        </button>
+
+    </div>
+
+    <br><br>
+
+    <button onclick="rotateSelected(-15)">
+        ↺ 左回転
+    </button>
+
+    <button onclick="rotateSelected(15)">
+        ↻ 右回転
+    </button>
+
+    <button onclick="deleteSelected()">
+        🗑 削除
+    </button>
+
+    <button onclick="clearAllPills()">
+        🧹 全消し
+    </button>
+
+    <button onclick="toggleLogo()">
+        🏷 ロゴON/OFF
+    </button>
+
+    <button onclick="openBackgroundPanel()">
+        🎨 背景色変更
+    </button>
+
+    <button onclick="saveImage()">
+        💾 保存
+    </button>
+
+    <button onclick="postToX()">
+        X投稿文を作成
+    </button>
+
+    <br><br>
+    
+    <div id="selectedInfo">
+        選択中錠剤：なし
+    </div>
+
+    <br>
+
+    <div id="backgroundPanel" class="panelHidden">
+
+        <h3>背景色変更</h3>
+
+        <div class="presetColors">
+
+            <button
+                class="colorButton white"
+                onclick="setBackground('#FFFFFF')">
+            </button>
+
+            <button
+                class="colorButton gray"
+                onclick="setBackground('#E2E2E2')">
+            </button>
+
+            <button
+                class="colorButton mint"
+                onclick="setBackground('#E8FAF8')">
+            </button>
+
+            <button
+                class="colorButton pink"
+                onclick="setBackground('#FFF0F4')">
+            </button>
+
+            <button
+                class="colorButton lavender"
+                onclick="setBackground('#F4EEFF')">
+            </button>
+
+        </div>
+
+        <br>
+
+        <div>
+
+            <label>
+                自由に選ぶ
+            </label>
+
+            <br>
+
+            <input
+                type="color"
+                id="customColor"
+                value="#FFFFFF"
+                onchange="setCustomBackground()">
+
+        </div>
+
+        <br>
+
+        <button onclick="closeBackgroundPanel()">
+            閉じる
+        </button>
+
+    </div>
+
+    <div id="areaBackground">
+
+        <div id="area">
+
+            <img id="bag" src="img/bag.png">
+
+            <div id="pills"></div>
+
+            <img id="logo" src="img/logo.png">
+
+            <img id="copyright" src="img/copyright.png">
+
+        </div>
+
+    </div>
+    
+    <div id="notice">
+
+    ※サイズや色味は実物と多少異なる場合があります<br>
+    ※実際の商品とは配置可能数が異なる場合があります<br>
+    ※作成した画像の商用利用・再配布は禁止しています<br>
+    ※「X投稿文を作成」では画像は自動添付されません<br>
+    　 保存した画像を添付してご利用ください
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
